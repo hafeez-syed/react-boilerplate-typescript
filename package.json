@@ -52,6 +52,7 @@
     "@babel/register": "7.4.4",
     "@hot-loader/react-dom": "^16.8.6",
     "autoprefixer": "^9.5.1",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
@@ -89,6 +90,8 @@
     "sinon": "^7.3.2",
     "start-server-and-test": "^1.9.0",
     "style-loader": "^0.23.1",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.4.5",
     "webpack": "4.30.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "3.3.2",
@@ -96,6 +99,9 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
+    "@types/prop-types": "^15.7.1",
+    "@types/react": "^16.8.16",
+    "@types/react-dom": "^16.8.4",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "core-js": "^3.0.1",
