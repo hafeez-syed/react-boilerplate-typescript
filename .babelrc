@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": [
+          "last 2 versions",
+          "not dead",
+          "not < 2%"
+        ],
+        "corejs": "3.0.0",
+        "useBuiltIns": "entry"
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-transform-dynamic-import"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "dynamic-import-node",
+        "transform-dynamic-import",
+      ]
+    }
+  }
+}

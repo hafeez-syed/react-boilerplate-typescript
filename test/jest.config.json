@@ -1,0 +1,7 @@
+{
+  "testRegex": "((\\.|/*.)(snapshot))\\.js?$",
+  "rootDir": "..",
+  "setupFilesAfterEnv": [
+    "<rootDir>/testSetup.js"
+  ]
+}
