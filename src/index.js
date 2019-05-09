@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 import '@babel/polyfill'
 import DefaultErrorBoundary from '@module-error/DefaultErrorBoundary'
@@ -6,14 +6,14 @@ import App from './components/App'
 import './styles/main.scss'
 
 if (process.env.NODE_ENV !== 'production') {
-    const axe = require('react-axe')
+  const axe = require('react-axe')
 
-    axe(React, ReactDOM, 3000)
+  axe(React, ReactDOM, 3000)
 }
 
 ReactDOM.render(
-    <DefaultErrorBoundary>
-        <App />
-    </DefaultErrorBoundary>,
-    document.getElementById('app')
+  <DefaultErrorBoundary>
+    <App />
+  </DefaultErrorBoundary>,
+  document.getElementById('app')
 )
