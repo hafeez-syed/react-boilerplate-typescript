@@ -1,13 +1,12 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 import '@babel/polyfill'
-import DefaultErrorBoundary from '@module-error/DefaultErrorBoundary'
-import App from './components/App'
+import * as DefaultErrorBoundary from '@module-error/DefaultErrorBoundary'
+import * as App from './components/App'
 import './styles/main.scss'
 
 if (process.env.NODE_ENV !== 'production') {
   const axe = require('react-axe')
-
   axe(React, ReactDOM, 3000)
 }
 

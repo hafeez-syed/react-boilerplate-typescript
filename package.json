@@ -10,7 +10,7 @@
     "dev:hot": "npm run dev -- --hot",
     "start": "npm run dev:hot",
     "test-js": "react-scripts test --env=jsdom",
-    "test": "mocha --require @babel/register --require ./test/helpers.js --require ./test/dom.js --require ignore-styles ./src/**/*.spec.js",
+    "test": "mocha --require @babel/register --require ./test/helpers.js --require ./test/dom.js --require ignore-styles ./src/**/*.spec.ts",
     "test:watch": "npm run test -- --watch",
     "test:snapshot": "jest --config ./test/jest.config.json",
     "test:snapshot:watch": "npm run test:snapshot -- --watch",
@@ -100,6 +100,9 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
+    "@types/prop-types": "^15.7.1",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
@@ -108,7 +111,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
+    "react-redux": "^7n.0.3",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   }
