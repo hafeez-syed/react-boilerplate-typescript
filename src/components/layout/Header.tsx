@@ -1,5 +1,5 @@
-import * as React from 'react'
-import Greeting from '../errors-warnings-messages/Greeting'
+import * as React from 'react';
+import Greeting from '../errors-warnings-messages/Greeting';
 
 const Header = () => (
   <React.Fragment>
@@ -12,6 +12,6 @@ const Header = () => (
       </ul>
     </nav>
   </React.Fragment>
-)
+);
 
-export default Header
+export default Header;

@@ -1,8 +1,8 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'app.bundle.js'
@@ -11,12 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js?$/,
-        loader: 'babel-loader',
+        loader: ['awesome-typescript-loader'],
         exclude: /node_modules/
       },
       {
@@ -33,7 +28,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               plugins: function() {
-                return [require('precss'), require('autoprefixer')]
+                return [require('precss'), require('autoprefixer')];
               }
             }
           },
@@ -51,7 +46,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.ts', '.tsx', '.json'],
+    extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
       'react-dom': '@hot-loader/react-dom',
@@ -66,7 +61,12 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
+      inject: true,
       template: './src/index.html'
     })
-  ]
-}
+  ],
+  externals: {
+    React: 'react',
+    ReactDOM: 'react-dom'
+  }
+};

@@ -5,15 +5,14 @@
     }
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:cypress/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": false
     },
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -29,14 +28,21 @@
     "commonjs": true,
     "cypress/globals": true
   },
-  "plugins": ["prettier", "react", "jsx-a11y", "cypress"],
+  "plugins": ["prettier", "@typescript-eslint", "jsx-a11y", "cypress"],
   "rules": {
     "complexity": [2, 11],
     "no-console": 0,
     "react/no-find-dom-node": [0],
-    "react/prop-types": [1],
-    "react/require-default-props": [0]
+    "react/prop-types": [0],
+    "react/require-default-props": [0],
+    "no-var-requires": 0
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "globals": {
     "expect": true,
     "mount": true,

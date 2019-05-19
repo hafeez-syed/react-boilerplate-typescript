@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "alwaysStrict": false,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
     "jsx": "react",
     "lib": ["es2015", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "outDir": "./dist/",
+    "preserveConstEnums": true,
+    "strict": false,
     "sourceMap": true,
+    "strictNullChecks": false,
     "target": "es5"
-  }
+  },
+  "include": ["./src/*.tsx", "src/components/App.tsx"]
 }

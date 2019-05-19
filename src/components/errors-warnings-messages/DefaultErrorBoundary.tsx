@@ -1,37 +1,40 @@
-import * as React from 'react'
-import ReactDOM from 'react-dom'
-import PTypes from 'prop-types'
+import React, { Fragment } from 'react';
+import PTypes from 'prop-types';
 
-export default class DefaultErrorBoundary extends React.Component {
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+export default class DefaultErrorBoundary extends React.Component<
+  {},
+  ErrorBoundaryState
+> {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       hasError: false
-    }
-
-    this.wrapper = React.createRef()
+    };
   }
 
   static propTypes = {
     children: PTypes.node.isRequired
-  }
+  };
 
   static componentDidMount() {
-    ReactDOM.findDOMNode(this)
+    // ReactDOM.findDOMNode(this)
   }
 
   static getDerivedStateFromError() {
-    return { hasError: true }
+    return { hasError: true };
   }
 
   render() {
-    const { hasError } = this.state
+    const { hasError } = this.state;
 
     return (
-      <React.Fragment>
+      <Fragment>
         {hasError ? 'Oops!!! something went wrong.' : this.props.children}
-      </React.Fragment>
-    )
+      </Fragment>
+    );
   }
 }
