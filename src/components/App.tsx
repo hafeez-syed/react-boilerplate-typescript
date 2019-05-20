@@ -4,7 +4,7 @@ import PTypes from 'prop-types';
 import axios from 'axios';
 
 import Header from './layout/Header';
-import Main from './main';
+import Main from './Main';
 import Footer from './layout/Footer';
 
 interface IState {
@@ -51,11 +51,11 @@ class App extends React.Component<{}, IState> {
 
   increment = () => {
     this.setState(doIncrement);
-  };
+  }
 
   decrement = () => {
     this.setState(doDecrement);
-  };
+  }
 
   render() {
     const { count } = this.state;
