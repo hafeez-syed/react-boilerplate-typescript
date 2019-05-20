@@ -49,13 +49,15 @@ class App extends React.Component<{}, IState> {
     this.unmounted = true;
   }
 
-  increment = () => {
+  increment = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
     this.setState(doIncrement);
-  }
+  };
 
-  decrement = () => {
+  decrement = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
     this.setState(doDecrement);
-  }
+  };
 
   render() {
     const { count } = this.state;
@@ -63,14 +65,14 @@ class App extends React.Component<{}, IState> {
     return (
       <React.Fragment>
         <Header />
-        <Main
+        {/* <Main
           title={title}
           count={count}
           increment={this.increment}
           decrement={this.decrement}
         >
           <AsyncCounters asyncCounters={this.state.asyncCounters} />
-        </Main>
+        </Main> */}
         <Footer />
       </React.Fragment>
     );
