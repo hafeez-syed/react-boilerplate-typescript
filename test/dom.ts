@@ -1,4 +1,4 @@
-import { JSDOM } from 'jsdom';
+/* import { JSDOM } from 'jsdom';
 
 const { window } = new JSDOM('<!doctype html><html><body></body></html>');
 
@@ -15,10 +15,5 @@ function copyProps(src, target) {
   Object.defineProperties(target, props);
 }
 
-global.window = window;
-global.document = window.document;
-global.navigator = {
-  userAgent: 'node.js'
-};
-
 copyProps(window, global);
+ */

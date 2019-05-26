@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import PTypes from 'prop-types';
-import axios from 'axios';
+import axios, { AxiosPromise } from 'axios';
 
 import Header from './layout/Header';
 import Main from './Main';
@@ -10,6 +10,12 @@ import Footer from './layout/Footer';
 interface IState {
   count: number;
   asyncCounters: number;
+}
+
+interface AxiosResponse {
+  counter: object;
+  total: number;
+  data: object;
 }
 
 const title = 'React, Webpack, Babel, Dev-server Boilerplate !!!...';
@@ -34,16 +40,16 @@ class App extends React.Component<{}, IState> {
   }
 
   componentDidMount() {
-    axios
-      .get('https://reqres.in/api/users?page=2', {
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      })
-      .then(counter => {
-        if (this.unmounted) return;
-        this.setState({ asyncCounters: counter.data.total });
-      });
+    const response = axios.get('https://reqres.in/api/users?page=2', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+
+    response.then(counter => {
+      if (this.unmounted) return;
+      this.setState({ asyncCounters: counter.data.total });
+    });
   }
 
   componentWillUnmount() {
