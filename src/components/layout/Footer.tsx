@@ -1,9 +1,11 @@
 import * as React from 'react';
 
 const Footer = () => (
-  <footer role="contentinfo">
-    <p>Put copyright, etc. here.</p>
-  </footer>
+  <div role="contentinfo">
+    <footer>
+      <p>Put copyright, etc. here.</p>
+    </footer>
+  </div>
 );
 
 export default Footer;

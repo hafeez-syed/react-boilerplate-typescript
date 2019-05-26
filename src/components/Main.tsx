@@ -8,16 +8,16 @@ const Warning = lazy(() => import('./Warning'));
 interface IProps {
   title: string;
   count: number;
-  increment: React.MouseEvent;
-  decrement: React.MouseEvent;
+  increment: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  decrement: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
-  clickHandler: React.MouseEvent;
+interface ButtonProps {
+  clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
   buttonLabel: string;
 }
 
-const Button: React.SFC<ButtonProps> = ({ clickHandler, buttonLabel }) => (
+const Button = ({ clickHandler, buttonLabel }: ButtonProps) => (
   <button onClick={clickHandler}>{buttonLabel}</button>
 );
 

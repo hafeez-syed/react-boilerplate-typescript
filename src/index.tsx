@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import '@babel/polyfill';
 import DefaultErrorBoundary from './components/errors-warnings-messages/DefaultErrorBoundary';
-// import * as App from './components/App'
+import App from './components/App';
 import './styles/main.scss';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 ReactDOM.render(
   <DefaultErrorBoundary>
-    <div>Hello React / Typescript</div>
+    <App />
   </DefaultErrorBoundary>,
   document.getElementById('app')
 );

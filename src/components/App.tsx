@@ -24,6 +24,7 @@ export const doDecrement = prevState => ({
 
 class App extends React.Component<{}, IState> {
   unmounted = false;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -49,12 +50,12 @@ class App extends React.Component<{}, IState> {
     this.unmounted = true;
   }
 
-  increment = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  increment = (event): void => {
     event.preventDefault();
     this.setState(doIncrement);
   };
 
-  decrement = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  decrement = (event): void => {
     event.preventDefault();
     this.setState(doDecrement);
   };
@@ -65,14 +66,14 @@ class App extends React.Component<{}, IState> {
     return (
       <React.Fragment>
         <Header />
-        {/* <Main
+        <Main
           title={title}
           count={count}
           increment={this.increment}
           decrement={this.decrement}
         >
           <AsyncCounters asyncCounters={this.state.asyncCounters} />
-        </Main> */}
+        </Main>
         <Footer />
       </React.Fragment>
     );
