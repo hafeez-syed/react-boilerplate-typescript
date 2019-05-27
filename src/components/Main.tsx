@@ -1,6 +1,4 @@
 import * as React from 'react';
-import PTypes from 'prop-types';
-import { HTMLAttributes } from 'enzyme';
 
 const lazy = (React as any).lazy;
 const Warning = lazy(() => import('./Warning'));

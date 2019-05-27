@@ -40,16 +40,16 @@ class App extends React.Component<{}, IState> {
   }
 
   componentDidMount() {
-    const response = axios.get('https://reqres.in/api/users?page=2', {
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-
-    response.then(counter => {
-      if (this.unmounted) return;
-      this.setState({ asyncCounters: counter.data.total });
-    });
+    axios
+      .get<AxiosResponse>('https://reqres.in/api/users?page=2', {
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
+      .then(counter => {
+        if (this.unmounted) return;
+        this.setState({ asyncCounters: counter.data.total });
+      });
   }
 
   componentWillUnmount() {
