@@ -11,6 +11,7 @@
     "start": "npm run dev:hot",
     "test-js": "react-scripts test --env=jsdom",
     "test": "mocha --require ts-node/register --require jsdom-global/register --require ./test/setupEnzyme.ts ./src/**/*.spec.ts --recursive --timeout 5000",
+    "test-jest": "jest",
     "test:watch": "npm run test -- --watch",
     "test:snapshot": "jest --config ./test/jest.config.json",
     "test:snapshot:watch": "npm run test:snapshot -- --watch",
@@ -44,6 +45,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "7.4.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",

@@ -12,11 +12,12 @@
     "noImplicitAny": false,
     "outDir": "./dist/",
     "preserveConstEnums": true,
+    "skipLibCheck": true,
     "strict": false,
     "sourceMap": true,
     "strictNullChecks": false,
     "target": "es5"
   },
   "include": ["./src/*.tsx", "src/components/App.tsx"],
-  "exclude": ["node_modules", "webpack"]
+  "exclude": ["node_modules"]
 }

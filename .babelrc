@@ -19,6 +19,7 @@
     "@babel/plugin-syntax-dynamic-import",
     "babel-plugin-transform-dynamic-import"
   ],
+  "externalHelpers": true,
   "env": {
     "test": {
       "plugins": ["dynamic-import-node", "transform-dynamic-import"]

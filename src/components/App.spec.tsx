@@ -18,15 +18,15 @@ describe('App component', () => {
   afterEach(() => {
     axios.get.restore();
   });
+});
 
+describe('Local State', () => {
   it('Renders without error', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper.find(AsyncCounters)).to.have.length(1);
   });
-});
 
-describe('Local State', () => {
   it('should increment the counter in state', () => {
     const state = { count: 0 };
     const newState = doIncrement(state);

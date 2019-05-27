@@ -5,6 +5,7 @@ import axios, { AxiosPromise } from 'axios';
 
 import Header from './layout/Header';
 import Main from './Main';
+import CheckboxWithLabel from './CheckboxWithLabel';
 import Footer from './layout/Footer';
 
 interface IState {
@@ -80,6 +81,7 @@ class App extends React.Component<{}, IState> {
         >
           <AsyncCounters asyncCounters={this.state.asyncCounters} />
         </Main>
+        <CheckboxWithLabel labelOn="On" labelOff="Off" />
         <Footer />
       </React.Fragment>
     );
