@@ -1,4 +1,4 @@
-import * as React from 'react';
+/* import * as React from 'react';
 import { shallow } from 'enzyme';
 import CheckboxWithLabel from './checkboxWithLabel';
 
@@ -13,3 +13,4 @@ test('CheckboxWithLabel changes the text after click', () => {
   // Snapshot demo
   expect(checkbox).toMatchSnapshot();
 });
+ */

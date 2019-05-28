@@ -11,7 +11,7 @@
     "start": "npm run dev:hot",
     "test-js": "react-scripts test --env=jsdom",
     "test": "mocha --require ts-node/register --require jsdom-global/register --require ./test/setupEnzyme.ts ./src/**/*.spec.ts --recursive --timeout 5000",
-    "test-jest": "jest",
+    "test-jest": "jest --config ./jest.config.js",
     "test:watch": "npm run test -- --watch",
     "test:snapshot": "jest --config ./test/jest.config.json",
     "test:snapshot:watch": "npm run test:snapshot -- --watch",

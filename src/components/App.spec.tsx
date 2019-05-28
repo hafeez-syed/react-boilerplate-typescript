@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+/* import sinon from 'sinon';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import axios from 'axios';
@@ -41,3 +41,4 @@ describe('Local State', () => {
     expect(newState.count).to.equal(-1);
   });
 });
+ */
