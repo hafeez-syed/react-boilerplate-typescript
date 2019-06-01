@@ -1,8 +1,9 @@
-/* import * as React from 'react';
-import { shallow } from 'enzyme';
+import * as React from 'react';
+import { shallow, configure } from 'enzyme';
+
 import CheckboxWithLabel from './checkboxWithLabel';
 
-test('CheckboxWithLabel changes the text after click', () => {
+it('changes the text after click', () => {
   const checkbox = shallow(<CheckboxWithLabel labelOn="On" labelOff="Off" />);
 
   // Interaction demo
@@ -13,4 +14,3 @@ test('CheckboxWithLabel changes the text after click', () => {
   // Snapshot demo
   expect(checkbox).toMatchSnapshot();
 });
- */

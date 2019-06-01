@@ -1,4 +1,5 @@
-/* import sinon from 'sinon';
+import React from 'react';
+import sinon from 'sinon';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import axios from 'axios';
@@ -17,6 +18,11 @@ describe('App component', () => {
 
   afterEach(() => {
     axios.get.restore();
+  });
+
+  it('Renders without error', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find(AsyncCounters)).to.have.length(1);
   });
 });
 
@@ -41,4 +47,3 @@ describe('Local State', () => {
     expect(newState.count).to.equal(-1);
   });
 });
- */
