@@ -3,29 +3,26 @@
     [
       "@babel/preset-env",
       {
-        "targets": [
-          "last 2 versions",
-          "not dead",
-          "not < 2%"
-        ],
+        "targets": ["last 2 versions", "not dead", "not < 2%"],
         "corejs": "3.0.0",
         "useBuiltIns": "entry"
       }
     ],
-    "@babel/preset-react"
+    "@babel/preset-react",
+    "@babel/preset-typescript"
   ],
   "plugins": [
     "react-hot-loader/babel",
+    "@babel/plugin-external-helpers",
     "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import",
     "babel-plugin-transform-dynamic-import"
   ],
+  "externalHelpers": true,
   "env": {
     "test": {
-      "plugins": [
-        "dynamic-import-node",
-        "transform-dynamic-import",
-      ]
+      "plugins": ["dynamic-import-node", "transform-dynamic-import"]
     }
   }
 }
