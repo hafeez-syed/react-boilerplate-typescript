@@ -37,8 +37,8 @@
   "rules": {
     "no-shadow": "warn",
     "no-console": 0,
-    "no-var-requires": true,
-    "@typescript-eslint/no-var-requires": true,
+    "no-var-requires": 0,
+    "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/explicit-function-return-off": "off",
     "@typescript-eslint/indent": "off",
