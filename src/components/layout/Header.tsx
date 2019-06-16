@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Greeting from '../errors-warnings-messages/Greeting';
+import Nav from './Nav';
 
 const Header = () => (
   <React.Fragment>
@@ -7,9 +8,7 @@ const Header = () => (
       <p>{Greeting('Company-Logo')}</p>
     </header>
     <nav role="navigation">
-      <ul>
-        <li>Put navigation here</li>
-      </ul>
+      <Nav />
     </nav>
   </React.Fragment>
 );

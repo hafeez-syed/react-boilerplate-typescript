@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import PTypes from 'prop-types';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import axios, { AxiosPromise } from 'axios';
 
 import Header from './layout/Header';
-import Main from './Main';
-import CheckboxWithLabel from './CheckboxWithLabel';
+import Main from './pages/Main';
+import CheckboxWithLabel from './elements/CheckboxWithLabel';
+import Contact from './pages/Contact';
 import Footer from './layout/Footer';
 
 interface IState {
@@ -71,19 +73,33 @@ class App extends React.Component<{}, IState> {
     const { count } = this.state;
 
     return (
-      <React.Fragment>
+      <Router>
         <Header />
-        <Main
-          title={title}
-          count={count}
-          increment={this.increment}
-          decrement={this.decrement}
-        >
-          <AsyncCounters asyncCounters={this.state.asyncCounters} />
-        </Main>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Main
+                title={title}
+                count={count}
+                increment={this.increment}
+                decrement={this.decrement}
+              >
+                <AsyncCounters asyncCounters={this.state.asyncCounters} />
+              </Main>
+            )}
+          />
+          <Route path="/popular-repos" component={Contact} />
+          <Route
+            render={() => {
+              return <p>Not found 404</p>;
+            }}
+          />
+        </Switch>
         <CheckboxWithLabel labelOn="On" labelOff="Off" />
         <Footer />
-      </React.Fragment>
+      </Router>
     );
   }
 }
