@@ -6,6 +6,10 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
+  moduleNameMapper: {
+    '^@module-error/(.*)':
+      '<rootDir>/src/components/errors-warnings-messages/$1'
+  },
   globals: {
     'ts-jest': {
       tsConfig: './tsconfig.json',
