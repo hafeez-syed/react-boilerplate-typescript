@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Greeting from '../errors-warnings-messages/Greeting';
+import Greeting from '@module-error/Greeting';
+
 import Nav from './Nav';
 
 const Header = () => (

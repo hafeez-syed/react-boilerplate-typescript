@@ -1,6 +1,8 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
+const resolveAliasPath = (dir: string) => path.join(__dirname, 'src', dir);
+
 module.exports = {
   entry: './src/index.tsx',
   output: {
@@ -33,7 +35,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: function() {
+              plugins: function () {
                 return [require('precss'), require('autoprefixer')];
               }
             }
@@ -54,12 +56,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      'react-dom': '@hot-loader/react-dom',
-      '@module-error': path.resolve(
-        __dirname,
-        'src/components/errors-warnings-messages'
-      )
+      '@module-error': resolveAliasPath('components/errors-warnings-messages')
     }
   },
   optimization: {

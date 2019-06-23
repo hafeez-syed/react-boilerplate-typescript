@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const lazy = (React as any).lazy;
-const Warning = lazy(() => import('../errors-warnings-messages/Warning'));
+const Warning = lazy(() => import('@module-error/Warning'));
 
 interface IProps {
   title: string;

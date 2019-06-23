@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import '@babel/polyfill';
-import DefaultErrorBoundary from './components/errors-warnings-messages/DefaultErrorBoundary';
+import DefaultErrorBoundary from '@module-error/DefaultErrorBoundary';
 import App from './components/App';
 import './styles/main.scss';
 
