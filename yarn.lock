@@ -4173,7 +4173,7 @@ eslint@^2.7.0:
     pluralize "^1.2.1"
     progress "^1.1.8"
     require-uncached "^1.0.2"
-    shelljs "^0.6.0"
+    shelljs "^0.8.3"
     strip-json-comments "~1.0.1"
     table "^3.7.8"
     text-table "~0.2.0"
@@ -7073,9 +7073,9 @@ lodash.tail@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.tail/-/lodash.tail-4.1.1.tgz#d2333a36d9e7717c8ad2f7cacafec7c32b444664"
   integrity sha1-0jM6NtnncXyK0vfKyv7HwytERmQ=
 
-lodash.template@^4.2.4:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.4.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
+lodash.template@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.5.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
   integrity sha1-5zoDhcg1VZF0bgILmWecaQ5o+6A=
   dependencies:
     lodash._reinterpolate "~3.0.0"
@@ -8674,7 +8674,7 @@ postcss-initial@^3.0.0:
   resolved "https://registry.yarnpkg.com/postcss-initial/-/postcss-initial-3.0.0.tgz#1772512faf11421b791fb2ca6879df5f68aa0517"
   integrity sha512-WzrqZ5nG9R9fUtrA+we92R4jhVvEB32IIRTzfIG/PLL8UV4CvbF1ugTEHEFX6vWxl41Xt5RTCJPEZkuWzrOM+Q==
   dependencies:
-    lodash.template "^4.2.4"
+    lodash.template "^4.5.0"
     postcss "^7.0.2"
 
 postcss-lab-function@^2.0.1:
@@ -10206,9 +10206,9 @@ shebang-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
 
-shelljs@^0.6.0:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.6.1.tgz#ec6211bed1920442088fe0f70b2837232ed2c8a8"
+shelljs@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.3.tgz#ec6211bed1920442088fe0f70b2837232ed2c8a8"
   integrity sha1-7GIRvtGSBEIIj+D3Cyg3Iy7SyKg=
 
 shellwords@^0.1.1:
