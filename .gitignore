@@ -6,5 +6,5 @@ coverage/
 cypress/videos
 cypress/screenshots
 src/__snapshots__
-package-lock.json
+*lock.json
 *.log
