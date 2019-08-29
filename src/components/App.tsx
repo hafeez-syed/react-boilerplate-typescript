@@ -10,7 +10,7 @@ import CheckboxWithLabel from './elements/CheckboxWithLabel';
 import Contact from './pages/Contact';
 import Footer from './layout/Footer';
 
-interface IState {
+interface AppState {
   count: number;
   asyncCounters: number;
 }
@@ -31,7 +31,7 @@ export const doDecrement = prevState => ({
   count: prevState.count - 1
 });
 
-class App extends React.Component<{}, IState> {
+class App extends React.Component<{}, AppState> {
   unmounted = false;
 
   constructor(props) {
